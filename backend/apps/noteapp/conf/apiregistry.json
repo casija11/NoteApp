@@ -1,0 +1,6 @@
+{
+    "/apis/createnote" : "/apis/createnote.js?needsToken=false&addsToken=sub:access",
+    "/apis/deletenote" : "/apis/deletenote.js?get=true&needsToken=false&addsToken=sub:access",
+    "/apis/updatenote" : "/apis/updatenote.js?get=true&needsToken=false&addsToken=sub:access",
+    "/apis/getnote" : "/apis/getnote.js?get=true&needsToken=false&addsToken=sub:access"
+}

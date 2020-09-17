@@ -1,0 +1,25 @@
+
+<div id="app-notes">
+    <div>
+    <label for="heading" style="margin:35px; font-weight:bold;">Note Application</label>
+    </div>
+    <br>
+    <div>
+        <label for="title">Title: </label> 
+        <input type="text" placeholder="Title" name="message" id="title"/>
+    </div>
+    <br>
+    <div>
+        <label for="Note">Note: </label> 
+        <textarea name="note" id="note" rows="4" cols="50" placeholder="Description"></textarea>
+    </div>
+    <br>
+
+    <input type="button" value="Create Notes!" id="create-note" onclick='monkshu_env.components["app-notes"].createnote()'>
+
+    <input type="button" value="Get Notes!" id="get-note" onclick='monkshu_env.components["app-notes"].getnote()'>
+    <br>
+    <br>
+    <div id="printnote">
+    </div>
+</div>

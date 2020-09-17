@@ -5,8 +5,11 @@
     </div>
     <br>
     <div>
+        <input type="text"name="id" id="id" style="display: none;"/>
+    </div>
+    <div>
         <label for="title">Title: </label> 
-        <input type="text" placeholder="Title" name="message" id="title"/>
+        <input type="text" placeholder="Title" name="title" id="title"/>
     </div>
     <br>
     <div>
@@ -15,9 +18,7 @@
     </div>
     <br>
 
-    <input type="button" value="Create Notes!" id="create-note" onclick='monkshu_env.components["app-notes"].createnote()'>
-
-    <input type="button" value="Get Notes!" id="get-note" onclick='monkshu_env.components["app-notes"].getnote()'>
+    <input type="button" value="Create Note!" id="create-note" onclick='monkshu_env.components["app-notes"].createnote()'>
     <br>
     <br>
     <div id="printnote">

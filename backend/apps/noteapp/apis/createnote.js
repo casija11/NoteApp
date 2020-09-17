@@ -21,7 +21,7 @@ exports.doService = async jsonReq => {
     } catch (error) {
         console.error(error);
         return API_CONSTANTS.API_RESPONSE_SERVER_ERROR;
-1    }
+    }
 }
 
 const createNote = async (jsonReq) => {
@@ -32,12 +32,18 @@ const createNote = async (jsonReq) => {
             useUnifiedTopology: true,
              useNewUrlParser: true
             });
-            const note=new Note({
-                _id:new  mongoose.Types.ObjectId(),
-                title: jsonReq.title,
-                content: jsonReq.content
-            });
-            const doc=await note.save();
+            if(jsonReq._id!="")
+            {
+                const doc=await Note.findByIdAndUpdate(jsonReq._id , {title : jsonReq.title , content: jsonReq.content },{useFindAndModify:false});
+            }
+            else{
+                const note=new Note({
+                    _id:new  mongoose.Types.ObjectId(),
+                    title: jsonReq.title,
+                    content: jsonReq.content
+                });
+                const doc=await note.save();
+            }
             const document=await Note.find({});
             return document;
         }
